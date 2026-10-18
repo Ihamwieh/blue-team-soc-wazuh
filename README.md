@@ -13,13 +13,12 @@ This portfolio documents a virtual SOC lab built with Wazuh and integrated endpo
 - [Selected Evidence](docs/evidence/)
 ## Lab Architecture
 
-- Virtualized lab environment using Hyper-V
-- Wazuh Manager and Indexer for centralized event collection and analysis
-- Windows endpoints monitored with Sysmon and Windows Event Logs
-- Ubuntu endpoint monitored with Suricata network telemetry
-- Kali Linux used only as an authorized lab test system
+- Der Wazuh Manager verarbeitet Ereignisse und erzeugt Alerts; der Wazuh Indexer speichert und indexiert sie.
+- Windows-Endpunkte werden mit Sysmon- und Windows-Ereignisprotokollen überwacht.
+- Suricata auf Ubuntu erfasst den Netzwerkverkehr und erzeugt Netzwerkereignisse, die der Wazuh Agent an den Manager weiterleitet.
+- Kali Linux dient ausschließlich als autorisiertes Testsystem.
 
-**Event flow:** Endpoints and Suricata → Wazuh Manager → Indexer → SOC dashboards and alert triage
+**Ereignisfluss:** Windows- und Ubuntu-Agenten (einschließlich Suricata-Ereignissen aus `eve.json`) → Wazuh Manager → Wazuh Indexer → Wazuh Dashboard
 
 ## Validated Detection Use Cases
 
