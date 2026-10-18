@@ -5,7 +5,12 @@ A hands-on Blue Team laboratory project focused on security monitoring, detectio
 ## Project Overview
 
 This portfolio documents a virtual SOC lab built with Wazuh and integrated endpoint and network telemetry. It demonstrates how security events are collected, analyzed, mapped to MITRE ATT&CK, and reviewed through a repeatable triage workflow.
+## Project Documentation
 
+- [Portfolio – German (PDF)](docs/portfolio/Blue_Team_SOC_Wazuh_Portfolio_DE_Stand_17-10-2026.pdf)
+- [Portfolio – English (PDF)](docs/portfolio/Blue_Team_SOC_Wazuh_Portfolio_EN_Stand_17-10-2026.pdf)
+- [Portfolio – Arabic (PDF)](docs/portfolio/Blue_Team_SOC_Wazuh_Portfolio_AR_Stand_17-10-2026.pdf)
+- [Selected Evidence](docs/evidence/)
 ## Lab Architecture
 
 - Virtualized lab environment using Hyper-V
