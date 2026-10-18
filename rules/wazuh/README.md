@@ -1,24 +1,31 @@
 # Wazuh-Regeln
 
-Dieses Verzeichnis dokumentiert lokale Wazuh-Regeln des SOC-Labors. Die Regeldefinitionen werden ergänzt, nachdem sie mit der aktiven Konfiguration abgeglichen wurden.
+Dieses Verzeichnis enthält die im SOC-Labor erstellten und getesteten lokalen Wazuh-Regeln.
 
-## Bestätigter Anwendungsfall
+## Kali-Netzwerkerkennung
 
-### Erkennung einer Netzwerkverbindung von Kali
+Datei: `100110-100111_kali_network_detection.xml`
 
-- **Regel-ID:** `100110`
-- **Logquelle:** Windows Filtering Platform, Event ID `5156`
-- **Bedingung:** Netzwerkverbindung mit der Quell-IP `192.168.20.7`
-- **Ziel:** Autorisierte Netzwerkaktivität des Kali-Testsystems im Labor erkennen
-- **Validierung:** Die Erkennung wurde im Labor getestet und im Wazuh-Dashboard geprüft.
-- **MITRE ATT&CK:** Zuordnung nur angeben, wenn sie für diese Regel in der Projektdokumentation belegt ist.
+### Regel 100110 – Einzelne Netzwerkverbindung
 
-## Weitere lokale Regeln
+- **Level:** 5
+- **Übergeordnete Regel:** 60103
+- **Logquelle:** Windows Filtering Platform
+- **Windows Event ID:** 5156
+- **Quelladresse:** 192.168.20.7 (autorisiertes Kali-Testsystem)
+- **Zweck:** Erkennung einzelner Netzwerkverbindungen des Kali-Testsystems
+- **Gruppen:** `network_scan`, `kali_activity`
 
-Die IDs `100111`, `100120` und `100121` werden hier erst beschrieben, nachdem ihre aktiven Regeldefinitionen und Testergebnisse geprüft wurden.
+### Regel 100111 – Korrelierter Netzwerk-Scan
 
-## Ablage und Prüfung
+- **Level:** 10
+- **Abhängigkeit:** Regel 100110
+- **Schwellwert:** Mindestens 10 erkannte Verbindungen innerhalb von 60 Sekunden
+- **Ignore-Zeit:** 60 Sekunden
+- **Zweck:** Erkennung eines möglichen Netzwerk-Scans
+- **MITRE ATT&CK:** T1046 – Network Service Discovery
+- **Gruppen:** `network_scan`, `kali_activity`, `correlation`
 
-- Regeldefinitionen werden als XML-Dateien in diesem Verzeichnis abgelegt.
-- Zu jeder Regel werden Zweck, Logquelle, Auslösebedingung und ein belegter Test dokumentiert.
-- Vor einer Veröffentlichung werden IP-Adressen, Hostnamen und andere Umgebungsdetails geprüft und bei Bedarf anonymisiert.
+## Validierung
+
+Die Regeln wurden durch einen autorisierten Nmap-Test innerhalb der isolierten Laborumgebung ausgelöst. Die erzeugten Ereignisse und Alerts wurden anschließend im Wazuh-Dashboard geprüft und dokumentiert.
