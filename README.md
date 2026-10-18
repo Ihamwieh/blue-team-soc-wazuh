@@ -10,10 +10,10 @@ Sicherheitsereignisse werden gesammelt, analysiert, MITRE ATT&CK zugeordnet und 
 
 ## Projektdokumentation
 
-- [Portfolio – Deutsch (PDF)](Docs/Portfolio/Blue_Team_SOC_Wazuh_Portfolio_DE_Stand_17-10-2026.pdf)
-- [Portfolio – English (PDF)](Docs/Portfolio/Blue_Team_SOC_Wazuh_Portfolio_EN_Stand_17-10-2026.pdf)
-- [Portfolio – Arabisch (PDF)](Docs/Portfolio/Blue_Team_SOC_Wazuh_Portfolio_AR_Stand_17-10-2026.pdf)
-- [Ausgewählte Nachweise](Docs/Belege)
+- [Portfolio – Deutsch (PDF)](docs/portfolio/Blue_Team_SOC_Wazuh_Portfolio_DE_Stand_17-10-2026.pdf)
+- [Portfolio – English (PDF)](docs/portfolio/Blue_Team_SOC_Wazuh_Portfolio_EN_Stand_17-10-2026.pdf)
+- [Portfolio – Arabisch (PDF)](docs/portfolio/Blue_Team_SOC_Wazuh_Portfolio_AR_Stand_17-10-2026.pdf)
+- [Ausgewählte Nachweise](docs/evidence)
 
 ## Laborarchitektur
 
@@ -44,28 +44,28 @@ Windows- und Ubuntu-Agenten einschließlich Suricata-Ereignissen aus `eve.json` 
 
 ### Encoded PowerShell Detection
 
-![Wazuh PowerShell Alert](Docs/Belege/Wazuh_PowerShell_92057_Triage_Result.png)
+![Wazuh PowerShell Alert](docs/evidence/Wazuh_PowerShell_92057_Triage_Result.png)
 
 ### Suricata TCP-SYN-Port-Scan
 
-![Wazuh Suricata Alert](Docs/Belege/Wazuh_Suricata_Nmap_SYN_Scan_1000002.png)
+![Wazuh Suricata Alert](docs/evidence/Wazuh_Suricata_Nmap_SYN_Scan_1000002.png)
 
 ### Active-Directory-Gruppenänderung
 
-![Wazuh Domain Admins Alert](Docs/Belege/20_AD_Domain_Admins_Changed_Rule_60159.png)
+![Wazuh Domain Admins Alert](docs/evidence/20_AD_Domain_Admins_Changed_Rule_60159.png)
 
 ## Inhalt des Repositories
 
 | Pfad | Inhalt |
 |---|---|
-| [Docs/Portfolio](Docs/Portfolio) | Vollständige Projektdokumentation auf Deutsch, Englisch und Arabisch |
-| [Docs/Belege](Docs/Belege) | Ausgewählte und geprüfte Screenshots |
-| [Regeln/Wazuh](Regeln/Wazuh) | Lokale Wazuh-Regeln und Suricata-Integration |
-| [Regeln/Sigma](Regeln/Sigma) | In Wazuh XML umgesetzte Sigma-Erkennungslogik |
-| [Regeln/Suricata](Regeln/Suricata) | Lokale Suricata-Regeln |
-| [Konfigurationen](Konfigurationen) | Bereinigte Konfigurationsauszüge |
-| [Runbooks](Runbooks) | Triage- und Incident-Response-Anleitungen |
-| [Tests](Tests) | Dokumentierte und validierte Detection-Tests |
+| [docs/portfolio](docs/portfolio) | Vollständige Projektdokumentation auf Deutsch, Englisch und Arabisch |
+| [docs/evidence](docs/evidence) | Ausgewählte und geprüfte Screenshots |
+| [rules/wazuh](rules/wazuh) | Lokale Wazuh-Regeln und Suricata-Integration |
+| [rules/sigma](rules/sigma) | In Wazuh XML umgesetzte Sigma-Erkennungslogik |
+| [rules/suricata](rules/suricata) | Lokale Suricata-Regeln |
+| [configs](configs) | Bereinigte Konfigurationsauszüge |
+| [runbooks](runbooks) | Triage- und Incident-Response-Anleitungen |
+| [tests](tests) | Dokumentierte und validierte Detection-Tests |
 
 ## Technische Schwerpunkte
 
