@@ -1,9 +1,9 @@
 ![Blue Team SOC Lab with Wazuh](assets/blue-team-soc-wazuh-banner.png)
 
-🌐 **Interaktives Portfolio:** [ibrahim-hamwieh.de](https://ibrahim-hamwieh.de)
+
 
 # Blue Team SOC Lab mit Wazuh
-
+🌐 **Interaktives Portfolio:** [ibrahim-hamwieh.de](https://ibrahim-hamwieh.de)
 Praxisorientiertes Blue-Team-Laborprojekt mit Schwerpunkt auf Security Monitoring, Detection Engineering, Alert-Triage und Incident Response.
 
 ## Projektübersicht
